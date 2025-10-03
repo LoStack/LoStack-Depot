@@ -4,7 +4,7 @@ services:
     image: hexxa/quickshare
     environment:
     - DEFAULTADMINPWD=${ADMIN_PASSWORD}
-    - DEFAULTADMIN=admin
+    - DEFAULTADMIN=${LDAP_ADMIN_USERNAME}
     restart: unless-stopped
     hostname: quickshare
     networks:
@@ -23,7 +23,6 @@ services:
     - lostack.autostart=true
     - lostack.group=quickshare
     - lostack.enable=true
-    # - traefik.http.routers.quickshare.rule=Host(`quickshare.${DOMAINNAME}`)
     - lostack.port=8686
     volumes:
     - ${APPDATA_DIR}/quickshare:/quickshare/root

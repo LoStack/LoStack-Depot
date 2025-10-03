@@ -14,7 +14,7 @@ services:
       retries: 3
       start_period: 90s
     environment:
-      MICROBIN_ADMIN_USERNAME: admin
+      MICROBIN_ADMIN_USERNAME: ${LDAP_ADMIN_USERNAME}
       MICROBIN_ADMIN_PASSWORD: ${ADMIN_PASSWORD}
       MICROBIN_PUBLIC_PATH: http://microbin.${DOMAINNAME}/
     restart: unless-stopped

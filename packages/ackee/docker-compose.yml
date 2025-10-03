@@ -8,7 +8,7 @@ services:
     environment:
       - WAIT_HOSTS=ackee-mongo:27017
       - ACKEE_MONGODB=mongodb://ackee-mongo:27017/ackee
-      - ACKEE_USERNAME=admin
+      - ACKEE_USERNAME=${LDAP_ADMIN_USERNAME}
       - ACKEE_PASSWORD=${ADMIN_PASSWORD}
       - ACKEE_TTL=3600000
       - ACKEE_ALLOW_ORIGIN=https://ackee.${DOMAINNAME}
@@ -17,7 +17,6 @@ services:
     restart: always  
     labels:
       - "lostack.enable=true"
-      # - "traefik.http.routers.ackee.rule=Host(`ackee.${DOMAINNAME}`)"
       - lostack.port=3000
       - "homepage.name=Ackee"
       - "homepage.group=Apps"

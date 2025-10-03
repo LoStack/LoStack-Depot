@@ -11,7 +11,7 @@ services:
     - DATABASE_URL=postgres://miniflux:$DATABASE_PASSWORD@miniflux-db/miniflux-db?sslmode=disable
     - RUN_MIGRATIONS=1
     - CREATE_ADMIN=1
-    - ADMIN_USERNAME=admin
+    - ADMIN_USERNAME=${LDAP_ADMIN_USERNAME}
     - ADMIN_PASSWORD=$ADMIN_PASSWORD
     - AUTH_PROXY_HEADER=Remote-User
     - AUTH_PROXY_USER_CREATION=1

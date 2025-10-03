@@ -29,13 +29,13 @@ services:
 
         --db-user freshrss
 
-        --default_user admin
+        --default_user ${LDAP_ADMIN_USERNAME}
 
         --language en
 
         '
-      FRESHRSS_USER: "--api_password ${ADMIN_PASSWORD}\n--email admin@${DOMAINNAME}\
-        \ \n--language en\n--password ${ADMIN_PASSWORD}\n--user admin\n"
+      FRESHRSS_USER: "--api_password ${ADMIN_PASSWORD}\n--email ${LDAP_ADMIN_USERNAME}@${DOMAINNAME}\
+        \ \n--language en\n--password ${ADMIN_PASSWORD}\n--user ${LDAP_ADMIN_USERNAME}\n"
     logging:
       options:
         max-size: 10m

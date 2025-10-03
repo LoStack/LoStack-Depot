@@ -3,7 +3,7 @@ services:
     image: zer0tonin/mikochi:latest
     environment:
     - DATA_DIR=/data
-    - USERNAME=admin
+    - USERNAME=${LDAP_ADMIN_USERNAME}
     - PASSWORD=${ADMIN_PASSWORD}
     restart: unless-stopped
     container_name: mikochi

@@ -20,7 +20,6 @@ services:
     - lostack.autostart=true
     - lostack.group=actual-budget
     - lostack.enable=true
-    # - traefik.http.routers.actual-budget.rule=Host(`actual-budget.${DOMAINNAME}`)
     - lostack.port=5006
     volumes:
     - ${APPDATA_DIR}/actual-budget:/data
