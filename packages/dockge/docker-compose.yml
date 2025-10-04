@@ -15,7 +15,7 @@ services:
       - traefik_network
     labels:
       - homepage.description=Docker Manager
-      - homepage.group=dockge
+      - homepage.group=Container Management
       - homepage.href=https://dockge.${DOMAINNAME}/
       - homepage.icon=dockge
       - homepage.name=Dockge
