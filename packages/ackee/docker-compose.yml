@@ -19,7 +19,7 @@ services:
       - "lostack.enable=true"
       - lostack.port=3000
       - "homepage.name=Ackee"
-      - "homepage.group=Apps"
+      - "homepage.group=Analytics"
       - "homepage.icon=mdi-google-analytics"
       - "homepage.description=Analytics Tool"
       - "homepage.href=https://ackee.${DOMAINNAME}/"

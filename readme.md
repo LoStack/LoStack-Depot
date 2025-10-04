@@ -63,7 +63,7 @@ LoStack recommends a consistent naming scheme, while you don't have to name them
 If you wish to submit a package to LoStack, you must follow the naming format for the service and child container.
 Abstract naming schemes like "app" for the primary container or "db" are not allowed to prevent naming conflicts between containers.
 
-The primary container should be the same as the package name, this is also the subdomain the package will be mounted out. Container names should be lowercase.
+The primary container should be the same as the package name, this is also the subdomain the package will be served on. Container names should be lowercase.
 
 See below for an example container, with a primary service and supporting db:
 ```yaml
@@ -118,6 +118,7 @@ services:
       - "lostack.enable=true"
 ```
 
+
 ### Environment Variables
 LoStack uses a set of standardized environment variables to make depot deployment easy.
 You may use any of these variables in a LoStack package.
@@ -165,6 +166,7 @@ LDAP_ORGANISATION
 LDAP_BASE_DN
 LDAP_ADMIN_USER
 ```
+
 
 ### Standardized Media Folders
 LoStack uses an opinionated media folder structure by default
